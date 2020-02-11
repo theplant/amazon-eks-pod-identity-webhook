@@ -15,9 +15,9 @@ endif
 
 
 # Generic make
-REGISTRY_ID?=602401143452
-IMAGE_NAME?=eks/pod-identity-webhook
-REGION?=us-west-2
+REGISTRY_ID?=562055475000
+IMAGE_NAME?=public/amazon-eks-pod-identity-webhook
+REGION?=ap-northeast-1
 IMAGE?=$(REGISTRY_ID).dkr.ecr.$(REGION).amazonaws.com/$(IMAGE_NAME)
 
 docker:
