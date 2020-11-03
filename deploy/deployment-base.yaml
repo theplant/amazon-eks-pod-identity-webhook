@@ -14,6 +14,12 @@ spec:
         app: pod-identity-webhook
     spec:
       serviceAccountName: pod-identity-webhook
+      nodeSelector:
+        kubernetes.io/role: master
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"
       containers:
       - name: pod-identity-webhook
         image: IMAGE
